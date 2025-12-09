@@ -14,7 +14,7 @@ const corsOptions = {
         // Add any other frontend URLs you use
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
     optionsSuccessStatus: 200
 };
@@ -22,7 +22,7 @@ const corsOptions = {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: ['*','https://callcenter-frontend-o9od.onrender.com',], // Allow all origins (DEVELOPMENT ONLY)
+    origin: ['*','https://frontend-2dhr.onrender.com',], // Allow all origins (DEVELOPMENT ONLY)
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization','X-Agent-Id'],
     credentials: true
@@ -33,6 +33,7 @@ app.use("/call", callRoutes);
 app.use("/webrtc", webrtcRoutes);
 
 module.exports = app;
+
 
 
 
