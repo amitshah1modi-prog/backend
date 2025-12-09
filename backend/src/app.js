@@ -14,7 +14,7 @@ const corsOptions = {
         // Add any other frontend URLs you use
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true,
     optionsSuccessStatus: 200
 };
@@ -33,6 +33,7 @@ app.use("/call", callRoutes);
 app.use("/webrtc", webrtcRoutes);
 
 module.exports = app;
+
 
 
 
