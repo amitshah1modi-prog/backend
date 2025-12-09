@@ -10,7 +10,7 @@ const corsOptions = {
     origin: [
         'http://localhost:3000',
         'http://localhost:5173', 
-        'https://callcenter-frontend-o9od.onrender.com', // Your frontend URL
+        'https://frontend-2dhr.onrender.com', // Your frontend URL
         // Add any other frontend URLs you use
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -33,6 +33,7 @@ app.use("/call", callRoutes);
 app.use("/webrtc", webrtcRoutes);
 
 module.exports = app;
+
 
 
 
